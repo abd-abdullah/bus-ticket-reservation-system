@@ -7,6 +7,17 @@
 Bus Ticket Reservation System is an automated system for purchasing online bus tickets.
 This project was my 3rd year varsity project developed by my team.  
 
+##Features
+1. System Setting Management
+2. Online Ticket Booking
+3. Real Time Booking System 
+5. Booking Cancel Request
+6. Easy to signup / signin
+7. Trip Management
+8. Profile Management
+9. Agent Management
+10. Admin Dashboard
+
 
 ##Requirements
 
