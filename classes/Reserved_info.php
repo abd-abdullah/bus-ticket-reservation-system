@@ -3,7 +3,7 @@
 /**
 * Counter_info class
 */
-class Reserved_info extends  Base
+class Reserved_info extends  BaseClass
 {
 
 	//fetch all Bus list

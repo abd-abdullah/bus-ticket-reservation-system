@@ -3,7 +3,7 @@
 /**
 * Counter_info class
 */
-class Counter_info extends Base
+class Counter_info extends BaseClass
 {
 	//fetch all Bus list
 	public function GetBoardingPoints($from_city){

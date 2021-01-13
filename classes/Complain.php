@@ -2,7 +2,7 @@
 /**
 * Counter_info class
 */
-class Complain extends  Base
+class Complain extends  BaseClass
 {
 	
 	//fetch all Bus list

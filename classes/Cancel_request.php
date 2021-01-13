@@ -3,7 +3,7 @@
 /**
 * Counter_info class
 */
-class Cancel_request extends  BaseC
+class Cancel_request extends  BaseClass
 {
 	
 	//fetch all Bus list

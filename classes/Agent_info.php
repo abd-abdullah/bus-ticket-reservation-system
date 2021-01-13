@@ -2,7 +2,7 @@
 /**
 * Counter_info class
 */
-class Agent_info extends Base
+class Agent_info extends BaseClass
 {
 
 	/*public function GetTripAndAgentInfo($agent_id,$trip_id){
