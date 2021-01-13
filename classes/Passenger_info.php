@@ -1,5 +1,5 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Session.php");
+include_once ($_SERVER['DOCUMENT_ROOT']."/libs/Session.php");
 Session::init();
 ?>
 
