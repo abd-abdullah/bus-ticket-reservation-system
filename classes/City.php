@@ -1,20 +1,10 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
 
 /**
 * index class
 */
-class City
+class City extends  BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
 	
 	//fetch all Bus list
 	public function GetAllCityByUniqueName(){

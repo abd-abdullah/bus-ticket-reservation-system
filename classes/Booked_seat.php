@@ -1,20 +1,9 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-
 /**
 * Counter_info class
 */
-class Booked_seat
+class Booked_seat extends BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
 
 	public function GetAllBookedSeats($trip_id,$date){
 		$sql = "SELECT * FROM tbl_booked_seats WHERE `trip_id`='$trip_id' and date ='$date'";

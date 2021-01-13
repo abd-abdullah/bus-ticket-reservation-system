@@ -1,23 +1,10 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-?>
 
-<?php
 /**
 * Counter_info class
 */
-class Booking_info
+class Booking_info extends BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
-	
 	//fetch all Bus list
 	public function GetAllSoldTkt(){
 		$sql = "SELECT COUNT(*) AS total FROM tbl_booking_info WHERE booking_status =1";

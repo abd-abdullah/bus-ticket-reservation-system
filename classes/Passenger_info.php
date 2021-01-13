@@ -1,25 +1,15 @@
 <?php
 include_once ($_SERVER['DOCUMENT_ROOT']."libs/Session.php");
 Session::init();
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
 ?>
 
 <?php
 /**
 * Passenger_info class
 */
-class Passenger_info
+class Passenger_info extends  BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
-	
+
 	public function PassengerReg($data){
 		$name = $this->test_input($data['name']);
 		$address = $this->test_input($data['address']);

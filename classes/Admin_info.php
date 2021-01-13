@@ -1,21 +1,10 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
 
 /**
 * Admin_info class
 */
-class Admin_info
+class Admin_info extends  BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
-
 	/*admin login function*/
 	public function AdminLogin($email,$pass){
 		$email = $this->test_input($email);

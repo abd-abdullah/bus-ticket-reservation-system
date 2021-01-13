@@ -1,23 +1,11 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-?>
 
-<?php
 /**
 * Counter_info class
 */
-class Reserved_info
+class Reserved_info extends  BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
-	
+
 	//fetch all Bus list
 	public function InsertSeat($data){
 		$trip_id = $this->test_input($data['trip_id']);

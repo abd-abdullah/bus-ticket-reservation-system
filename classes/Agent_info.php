@@ -1,20 +1,9 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-
 /**
 * Counter_info class
 */
-class Agent_info
+class Agent_info extends BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
 
 	/*public function GetTripAndAgentInfo($agent_id,$trip_id){
 		$sql = "SELECT * from tbl_agent_info INNER JOIN tbl_trip_info ON tbl_agent_info.agent_id = tbl_trip_info.agent_id WHERE tbl_trip_info.agent_id = '$agent_id' AND tbl_trip_info.trip_id='$trip_id'";

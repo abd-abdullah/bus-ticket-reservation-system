@@ -1,23 +1,10 @@
-
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-?>
 
-<?php
 /**
 * Counter_info class
 */
-class Trip_info
+class Trip_info extends  BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
 
 	public function GetSearchBus($from_city,$to_city){
 		$sql = "SELECT * FROM tbl_trip_info INNER JOIN tbl_bus_info ON tbl_trip_info.bus_id = tbl_bus_info.bus_id WHERE  tbl_trip_info.from_city='$from_city' AND tbl_trip_info.to_city='$to_city' ORDER by departure_time ASC";

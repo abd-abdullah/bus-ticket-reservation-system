@@ -1,22 +1,9 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-?>
-
-<?php
 /**
 * index class
 */
-class Bus_info
+class Bus_info extends  BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
 
 	public function GetBusById($bus_id){
 		$sql = "SELECT * from tbl_bus_info WHERE bus_id='$bus_id'";

@@ -1,23 +1,10 @@
-<?php
-include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
-include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-?>
 
 <?php
 /**
 * Counter_info class
 */
-class Counter_info
+class Counter_info extends BaseClass
 {
-	private $db;
-	private $fm;
-	
-	function __construct()
-	{
-		$this->db = new Database();
-		$this->fm = new Format();
-	}
-	
 	//fetch all Bus list
 	public function GetBoardingPoints($from_city){
 		$sql = "SELECT * FROM tbl_counter_info WHERE `city_name`='$from_city'";
