@@ -67,25 +67,22 @@ require_once "../libs/Session.php";
   <script src="assets/js/adminlte.min.js"></script>
  <script src="assets/js/demo.js">
  </script> 
- <script type="text/javascript">
-  $(document).ready(function () {
-    $('.sidebar-menu').tree()
-  })
-</script>
 
 <script>
-   $(function () {
-     $(".timepicker").timepicker({
-          showInputs: false
-        });
-      });
+   window.addEventListener('load', function (){
+       $('.sidebar-menu').tree()
+       $(".timepicker").timepicker({
+           showInputs: false
+       });
+   })
+
     </script>
 <!--time picker-->
 
 
 </head>
 
-<body class="hold-transition skin-purple sidebar-mini">
+<body class="hold-transition skin-yellow sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
