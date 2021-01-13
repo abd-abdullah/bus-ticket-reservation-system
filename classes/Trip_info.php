@@ -1,8 +1,7 @@
 
 <?php
-$filepath = realpath(dirname(__FILE__));
-include_once ($filepath."/../libs/Database.php");
-include_once ($filepath."/../helpers/Format.php");
+include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
+include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
 ?>
 
 <?php

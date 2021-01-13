@@ -1,9 +1,7 @@
 <?php
 include_once ($_SERVER['DOCUMENT_ROOT']."libs/Database.php");
 include_once ($_SERVER['DOCUMENT_ROOT']."helpers/Format.php");
-?>
 
-<?php
 /**
 * Admin_info class
 */
