@@ -14,7 +14,7 @@
 				<li><a class="googleplus" href="#"><span>Google+</span></a></li>
 			</ul>
 		</div>
-        <p >Copyright © 2018 Team Unique (Leader <a href="https://www.facebook.com/abd1rti/">Md. Abdullah</a>) All rights reserved.</p>
+        <p >Copyright © 2018 Team Unique (Leader <a style="color: gold;" href="https://www.facebook.com/abd1rti/">Md. Abdullah</a>) All rights reserved.</p>
 	</div>
 </div>
 <!--- /copy-right ---->
