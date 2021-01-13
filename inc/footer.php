@@ -9,12 +9,12 @@
 	
 		<div class="footer-social-icons">
 			<ul>
-				<li><a class="facebook" href="#"><span>Facebook</span></a></li>
-				<li><a class="twitter" href="#"><span>Twitter</span></a></li>
+				<li><a class="facebook" href="https://www.facebook.com/abd1rti/"><span>Facebook</span></a></li>
+				<li><a class="twitter" href="https://github.com/abd-abdullah"><span>GitHub</span></a></li>
 				<li><a class="googleplus" href="#"><span>Google+</span></a></li>
 			</ul>
 		</div>
-		<p >Copyright © 2018 Team Unique (Software Engineering) All rights reserved.</p>
+        <p >Copyright © 2018 Team Unique (Leader <a href="https://www.facebook.com/abd1rti/">Md. Abdullah</a>) All rights reserved.</p>
 	</div>
 </div>
 <!--- /copy-right ---->
