@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cell</title>
-<link type="text/css" rel="stylesheet" href="../fpdf.css">
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+    <title>Cell</title>
+    <link href="../fpdf.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>Cell</h1>
@@ -18,65 +18,65 @@ If automatic page breaking is enabled and the cell goes beyond the limit, a page
 done before outputting.
 <h2>Parameters</h2>
 <dl class="param">
-<dt><code>w</code></dt>
-<dd>
-Cell width. If <code>0</code>, the cell extends up to the right margin.
-</dd>
-<dt><code>h</code></dt>
-<dd>
-Cell height.
-Default value: <code>0</code>.
-</dd>
-<dt><code>txt</code></dt>
-<dd>
-String to print.
-Default value: empty string.
-</dd>
-<dt><code>border</code></dt>
-<dd>
-Indicates if borders must be drawn around the cell. The value can be either a number:
-<ul>
-<li><code>0</code>: no border</li>
-<li><code>1</code>: frame</li>
-</ul>
-or a string containing some or all of the following characters (in any order):
-<ul>
-<li><code>L</code>: left</li>
-<li><code>T</code>: top</li>
-<li><code>R</code>: right</li>
-<li><code>B</code>: bottom</li>
-</ul>
-Default value: <code>0</code>.
-</dd>
-<dt><code>ln</code></dt>
-<dd>
-Indicates where the current position should go after the call. Possible values are:
-<ul>
-<li><code>0</code>: to the right</li>
-<li><code>1</code>: to the beginning of the next line</li>
-<li><code>2</code>: below</li>
-</ul>
-Putting <code>1</code> is equivalent to putting <code>0</code> and calling Ln() just after.
-Default value: <code>0</code>.
-</dd>
-<dt><code>align</code></dt>
-<dd>
-Allows to center or align the text. Possible values are:
-<ul>
-<li><code>L</code> or empty string: left align (default value)</li>
-<li><code>C</code>: center</li>
-<li><code>R</code>: right align</li>
-</ul>
-</dd>
-<dt><code>fill</code></dt>
-<dd>
-Indicates if the cell background must be painted (<code>true</code>) or transparent (<code>false</code>).
-Default value: <code>false</code>.
-</dd>
-<dt><code>link</code></dt>
-<dd>
-URL or identifier returned by AddLink().
-</dd>
+    <dt><code>w</code></dt>
+    <dd>
+        Cell width. If <code>0</code>, the cell extends up to the right margin.
+    </dd>
+    <dt><code>h</code></dt>
+    <dd>
+        Cell height.
+        Default value: <code>0</code>.
+    </dd>
+    <dt><code>txt</code></dt>
+    <dd>
+        String to print.
+        Default value: empty string.
+    </dd>
+    <dt><code>border</code></dt>
+    <dd>
+        Indicates if borders must be drawn around the cell. The value can be either a number:
+        <ul>
+            <li><code>0</code>: no border</li>
+            <li><code>1</code>: frame</li>
+        </ul>
+        or a string containing some or all of the following characters (in any order):
+        <ul>
+            <li><code>L</code>: left</li>
+            <li><code>T</code>: top</li>
+            <li><code>R</code>: right</li>
+            <li><code>B</code>: bottom</li>
+        </ul>
+        Default value: <code>0</code>.
+    </dd>
+    <dt><code>ln</code></dt>
+    <dd>
+        Indicates where the current position should go after the call. Possible values are:
+        <ul>
+            <li><code>0</code>: to the right</li>
+            <li><code>1</code>: to the beginning of the next line</li>
+            <li><code>2</code>: below</li>
+        </ul>
+        Putting <code>1</code> is equivalent to putting <code>0</code> and calling Ln() just after.
+        Default value: <code>0</code>.
+    </dd>
+    <dt><code>align</code></dt>
+    <dd>
+        Allows to center or align the text. Possible values are:
+        <ul>
+            <li><code>L</code> or empty string: left align (default value)</li>
+            <li><code>C</code>: center</li>
+            <li><code>R</code>: right align</li>
+        </ul>
+    </dd>
+    <dt><code>fill</code></dt>
+    <dd>
+        Indicates if the cell background must be painted (<code>true</code>) or transparent (<code>false</code>).
+        Default value: <code>false</code>.
+    </dd>
+    <dt><code>link</code></dt>
+    <dd>
+        URL or identifier returned by AddLink().
+    </dd>
 </dl>
 <h2>Example</h2>
 <div class="doc-source">

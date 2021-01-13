@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     // The error part where I would like to hide message after some seconds
     $(".error-message").delay(3200).fadeOut(300);
 

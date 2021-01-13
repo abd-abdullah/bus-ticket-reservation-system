@@ -7,10 +7,13 @@
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
+SET
+SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET
+AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET
+time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,24 +31,25 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_admin_info`
 --
 
-CREATE TABLE `tbl_admin_info` (
-  `admin_id` int(11) NOT NULL,
-  `name` char(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone_number` varchar(20) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `img_url` varchar(40) NOT NULL,
-  `activation_status` tinyint(4) NOT NULL
+CREATE TABLE `tbl_admin_info`
+(
+    `admin_id`          int(11) NOT NULL,
+    `name`              char(50)     NOT NULL,
+    `email`             varchar(100) NOT NULL,
+    `phone_number`      varchar(20)  NOT NULL,
+    `address`           varchar(255) NOT NULL,
+    `password`          varchar(100) NOT NULL,
+    `img_url`           varchar(40)  NOT NULL,
+    `activation_status` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_admin_info`
 --
 
-INSERT INTO `tbl_admin_info` (`admin_id`, `name`, `email`, `phone_number`, `address`, `password`, `img_url`, `activation_status`) VALUES
-(28, 'SAAD', 'abd@gmail.com', '01904654712', 'Uttara Dhaka 1230', '202cb962ac59075b964b07152d234b70', 'agent_img/saad.jpg', 1),
-(30, 'Abdullah', 'abd1@gmail.com', '15103029', 'Uttara', '202cb962ac59075b964b07152d234b70', 'agent_img/1a28626aa6.jpg', 2);
+INSERT INTO `tbl_admin_info` (`admin_id`, `name`, `email`, `phone_number`, `address`, `password`, `img_url`, `activation_status`)
+VALUES (28, 'SAAD', 'abd@gmail.com', '01904654712', 'Uttara Dhaka 1230', '202cb962ac59075b964b07152d234b70', 'agent_img/saad.jpg', 1),
+       (30, 'Abdullah', 'abd1@gmail.com', '15103029', 'Uttara', '202cb962ac59075b964b07152d234b70', 'agent_img/1a28626aa6.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -53,25 +57,26 @@ INSERT INTO `tbl_admin_info` (`admin_id`, `name`, `email`, `phone_number`, `addr
 -- Table structure for table `tbl_agent_info`
 --
 
-CREATE TABLE `tbl_agent_info` (
-  `agent_id` int(11) NOT NULL,
-  `counter_id` int(11) NOT NULL,
-  `name` char(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone_number` varchar(33) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `img_url` varchar(40) NOT NULL,
-  `active_status` tinyint(4) NOT NULL DEFAULT '1'
+CREATE TABLE `tbl_agent_info`
+(
+    `agent_id`      int(11) NOT NULL,
+    `counter_id`    int(11) NOT NULL,
+    `name`          char(50)     NOT NULL,
+    `email`         varchar(100) NOT NULL,
+    `phone_number`  varchar(33)  NOT NULL,
+    `address`       varchar(255) NOT NULL,
+    `password`      varchar(100) NOT NULL,
+    `img_url`       varchar(40)  NOT NULL,
+    `active_status` tinyint(4) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_agent_info`
 --
 
-INSERT INTO `tbl_agent_info` (`agent_id`, `counter_id`, `name`, `email`, `phone_number`, `address`, `password`, `img_url`, `active_status`) VALUES
-(1, 2, 'Saad', 'raselhasandurjoy@gmail.com', '01960015012', 'uttara Dhaka', '202cb962ac59075b964b07152d234b70', 'agent_img/saad.jpg', 1),
-(36, 2, 'Md. Abdullah', 'abd@gmail.com', '01738868597', 'Uttara', '1cc39ffd758234422e1f75beadfc5fb2', 'agent_img/a60cd11db5.jpg', 1);
+INSERT INTO `tbl_agent_info` (`agent_id`, `counter_id`, `name`, `email`, `phone_number`, `address`, `password`, `img_url`, `active_status`)
+VALUES (1, 2, 'Saad', 'raselhasandurjoy@gmail.com', '01960015012', 'uttara Dhaka', '202cb962ac59075b964b07152d234b70', 'agent_img/saad.jpg', 1),
+       (36, 2, 'Md. Abdullah', 'abd@gmail.com', '01738868597', 'Uttara', '1cc39ffd758234422e1f75beadfc5fb2', 'agent_img/a60cd11db5.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -79,33 +84,34 @@ INSERT INTO `tbl_agent_info` (`agent_id`, `counter_id`, `name`, `email`, `phone_
 -- Table structure for table `tbl_booked_seats`
 --
 
-CREATE TABLE `tbl_booked_seats` (
-  `id` int(11) NOT NULL,
-  `pnr_no` int(40) NOT NULL,
-  `trip_id` int(40) NOT NULL,
-  `passenger_id` int(11) NOT NULL,
-  `seat_no` varchar(5) NOT NULL,
-  `date` date NOT NULL,
-  `seat_status` tinyint(4) NOT NULL DEFAULT '0'
+CREATE TABLE `tbl_booked_seats`
+(
+    `id`           int(11) NOT NULL,
+    `pnr_no`       int(40) NOT NULL,
+    `trip_id`      int(40) NOT NULL,
+    `passenger_id` int(11) NOT NULL,
+    `seat_no`      varchar(5) NOT NULL,
+    `date`         date       NOT NULL,
+    `seat_status`  tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_booked_seats`
 --
 
-INSERT INTO `tbl_booked_seats` (`id`, `pnr_no`, `trip_id`, `passenger_id`, `seat_no`, `date`, `seat_status`) VALUES
-(98, 24565, 6, 4, 'A1', '2018-04-10', 0),
-(99, 24565, 6, 4, 'A2', '2018-04-10', 0),
-(100, 14729, 6, 4, 'B2', '2018-04-10', 0),
-(103, 28046, 6, 4, 'D3', '2018-04-10', 1),
-(105, 27611, 5, 4, 'A2', '2018-04-10', 1),
-(106, 27611, 5, 4, 'A1', '2018-04-10', 1),
-(107, 15227, 5, 4, 'C4', '2018-04-06', 1),
-(108, 15227, 5, 4, 'C3', '2018-04-06', 1),
-(109, 8016, 5, 6, 'A1', '2018-04-07', 1),
-(110, 8016, 5, 6, 'A2', '2018-04-07', 1),
-(111, 8016, 5, 6, 'B1', '2018-04-07', 1),
-(112, 8016, 5, 6, 'B2', '2018-04-07', 1);
+INSERT INTO `tbl_booked_seats` (`id`, `pnr_no`, `trip_id`, `passenger_id`, `seat_no`, `date`, `seat_status`)
+VALUES (98, 24565, 6, 4, 'A1', '2018-04-10', 0),
+       (99, 24565, 6, 4, 'A2', '2018-04-10', 0),
+       (100, 14729, 6, 4, 'B2', '2018-04-10', 0),
+       (103, 28046, 6, 4, 'D3', '2018-04-10', 1),
+       (105, 27611, 5, 4, 'A2', '2018-04-10', 1),
+       (106, 27611, 5, 4, 'A1', '2018-04-10', 1),
+       (107, 15227, 5, 4, 'C4', '2018-04-06', 1),
+       (108, 15227, 5, 4, 'C3', '2018-04-06', 1),
+       (109, 8016, 5, 6, 'A1', '2018-04-07', 1),
+       (110, 8016, 5, 6, 'A2', '2018-04-07', 1),
+       (111, 8016, 5, 6, 'B1', '2018-04-07', 1),
+       (112, 8016, 5, 6, 'B2', '2018-04-07', 1);
 
 -- --------------------------------------------------------
 
@@ -113,30 +119,31 @@ INSERT INTO `tbl_booked_seats` (`id`, `pnr_no`, `trip_id`, `passenger_id`, `seat
 -- Table structure for table `tbl_booking_info`
 --
 
-CREATE TABLE `tbl_booking_info` (
-  `booking_id` int(40) NOT NULL,
-  `pnr_no` int(40) NOT NULL,
-  `trip_id` int(40) NOT NULL,
-  `counter_id` int(40) NOT NULL,
-  `passenger_id` int(11) NOT NULL,
-  `reference_no` varchar(60) NOT NULL,
-  `total_amount` int(11) NOT NULL,
-  `journey_date` date NOT NULL,
-  `booking_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `booking_status` int(10) NOT NULL DEFAULT '0'
+CREATE TABLE `tbl_booking_info`
+(
+    `booking_id`     int(40) NOT NULL,
+    `pnr_no`         int(40) NOT NULL,
+    `trip_id`        int(40) NOT NULL,
+    `counter_id`     int(40) NOT NULL,
+    `passenger_id`   int(11) NOT NULL,
+    `reference_no`   varchar(60) NOT NULL,
+    `total_amount`   int(11) NOT NULL,
+    `journey_date`   date        NOT NULL,
+    `booking_date`   timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `booking_status` int(10) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_booking_info`
 --
 
-INSERT INTO `tbl_booking_info` (`booking_id`, `pnr_no`, `trip_id`, `counter_id`, `passenger_id`, `reference_no`, `total_amount`, `journey_date`, `booking_date`, `booking_status`) VALUES
-(12, 24565, 6, 2, 4, '1231sfsw', 1120, '2018-04-10', '2018-04-05 19:48:22', 2),
-(13, 14729, 6, 2, 4, 'fchdfw643', 560, '2018-04-10', '2018-04-05 17:58:52', 0),
-(16, 28046, 6, 2, 4, 'dfst353', 560, '2018-04-10', '2018-04-05 20:05:53', 1),
-(18, 27611, 5, 2, 4, 'swfre d', 3000, '2018-04-10', '2018-04-05 20:33:32', 1),
-(19, 15227, 5, 2, 4, 'vdfe34', 3000, '2018-04-06', '2018-04-07 02:40:37', 1),
-(20, 8016, 5, 2, 6, '4777', 6000, '2018-04-07', '2018-04-07 16:29:28', 1);
+INSERT INTO `tbl_booking_info` (`booking_id`, `pnr_no`, `trip_id`, `counter_id`, `passenger_id`, `reference_no`, `total_amount`, `journey_date`, `booking_date`, `booking_status`)
+VALUES (12, 24565, 6, 2, 4, '1231sfsw', 1120, '2018-04-10', '2018-04-05 19:48:22', 2),
+       (13, 14729, 6, 2, 4, 'fchdfw643', 560, '2018-04-10', '2018-04-05 17:58:52', 0),
+       (16, 28046, 6, 2, 4, 'dfst353', 560, '2018-04-10', '2018-04-05 20:05:53', 1),
+       (18, 27611, 5, 2, 4, 'swfre d', 3000, '2018-04-10', '2018-04-05 20:33:32', 1),
+       (19, 15227, 5, 2, 4, 'vdfe34', 3000, '2018-04-06', '2018-04-07 02:40:37', 1),
+       (20, 8016, 5, 2, 6, '4777', 6000, '2018-04-07', '2018-04-07 16:29:28', 1);
 
 -- --------------------------------------------------------
 
@@ -144,23 +151,24 @@ INSERT INTO `tbl_booking_info` (`booking_id`, `pnr_no`, `trip_id`, `counter_id`,
 -- Table structure for table `tbl_bus_info`
 --
 
-CREATE TABLE `tbl_bus_info` (
-  `bus_id` int(11) NOT NULL,
-  `bus_no` varchar(11) NOT NULL,
-  `bus_type` char(20) NOT NULL,
-  `img_bus` varchar(40) NOT NULL,
-  `no_of_seats` int(11) NOT NULL DEFAULT '40'
+CREATE TABLE `tbl_bus_info`
+(
+    `bus_id`      int(11) NOT NULL,
+    `bus_no`      varchar(11) NOT NULL,
+    `bus_type`    char(20)    NOT NULL,
+    `img_bus`     varchar(40) NOT NULL,
+    `no_of_seats` int(11) NOT NULL DEFAULT '40'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_bus_info`
 --
 
-INSERT INTO `tbl_bus_info` (`bus_id`, `bus_no`, `bus_type`, `img_bus`, `no_of_seats`) VALUES
-(1, 'Shohag-01', 'A/C Sleeper', 'img/74626c9da5.jpg', 40),
-(2, 'Shohag-02', 'Non A/C', 'img/9846.jpg', 40),
-(3, 'ENA-01', 'A/C Sleeper', 'img/32537.jpg', 40),
-(4, 'ENA-02', 'Non A/C', 'img/27614.jpg', 40);
+INSERT INTO `tbl_bus_info` (`bus_id`, `bus_no`, `bus_type`, `img_bus`, `no_of_seats`)
+VALUES (1, 'Shohag-01', 'A/C Sleeper', 'img/74626c9da5.jpg', 40),
+       (2, 'Shohag-02', 'Non A/C', 'img/9846.jpg', 40),
+       (3, 'ENA-01', 'A/C Sleeper', 'img/32537.jpg', 40),
+       (4, 'ENA-02', 'Non A/C', 'img/27614.jpg', 40);
 
 -- --------------------------------------------------------
 
@@ -168,21 +176,22 @@ INSERT INTO `tbl_bus_info` (`bus_id`, `bus_no`, `bus_type`, `img_bus`, `no_of_se
 -- Table structure for table `tbl_cancel_request`
 --
 
-CREATE TABLE `tbl_cancel_request` (
-  `request_id` int(11) NOT NULL,
-  `pnr_no` int(40) NOT NULL,
-  `counter_id` int(40) NOT NULL,
-  `bkash_no` varchar(15) NOT NULL,
-  `cancel_status` int(15) NOT NULL DEFAULT '0',
-  `cancel_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+CREATE TABLE `tbl_cancel_request`
+(
+    `request_id`    int(11) NOT NULL,
+    `pnr_no`        int(40) NOT NULL,
+    `counter_id`    int(40) NOT NULL,
+    `bkash_no`      varchar(15) NOT NULL,
+    `cancel_status` int(15) NOT NULL DEFAULT '0',
+    `cancel_date`   timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_cancel_request`
 --
 
-INSERT INTO `tbl_cancel_request` (`request_id`, `pnr_no`, `counter_id`, `bkash_no`, `cancel_status`, `cancel_date`) VALUES
-(7, 28046, 2, '01738868597', 0, '2018-04-06 21:03:43');
+INSERT INTO `tbl_cancel_request` (`request_id`, `pnr_no`, `counter_id`, `bkash_no`, `cancel_status`, `cancel_date`)
+VALUES (7, 28046, 2, '01738868597', 0, '2018-04-06 21:03:43');
 
 -- --------------------------------------------------------
 
@@ -190,31 +199,32 @@ INSERT INTO `tbl_cancel_request` (`request_id`, `pnr_no`, `counter_id`, `bkash_n
 -- Table structure for table `tbl_cities`
 --
 
-CREATE TABLE `tbl_cities` (
-  `city_id` int(40) NOT NULL,
-  `city_name` char(40) NOT NULL
+CREATE TABLE `tbl_cities`
+(
+    `city_id`   int(40) NOT NULL,
+    `city_name` char(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_cities`
 --
 
-INSERT INTO `tbl_cities` (`city_id`, `city_name`) VALUES
-(1, 'Dhaka'),
-(4, 'Sylhet'),
-(5, 'Gazipur'),
-(6, 'Barguna'),
-(7, 'BARISAL'),
-(8, 'Bhola'),
-(9, 'Jhalokati'),
-(10, 'Patuakhali'),
-(11, 'Pirojpur'),
-(12, 'Bandarban'),
-(13, 'Brahmanbaria'),
-(14, 'Chandpur'),
-(15, 'Chittagong'),
-(16, 'Comilla'),
-(17, 'Cox\'s Bazar'),
+INSERT INTO `tbl_cities` (`city_id`, `city_name`)
+VALUES (1, 'Dhaka'),
+       (4, 'Sylhet'),
+       (5, 'Gazipur'),
+       (6, 'Barguna'),
+       (7, 'BARISAL'),
+       (8, 'Bhola'),
+       (9, 'Jhalokati'),
+       (10, 'Patuakhali'),
+       (11, 'Pirojpur'),
+       (12, 'Bandarban'),
+       (13, 'Brahmanbaria'),
+       (14, 'Chandpur'),
+       (15, 'Chittagong'),
+       (16, 'Comilla'),
+       (17, 'Cox\'s Bazar'),
 (18, 'Feni'),
 (19, 'Khagrachhari'),
 (20, 'Lakshmipur'),
@@ -334,7 +344,7 @@ CREATE TABLE `tbl_passenger_info` (
 
 INSERT INTO `tbl_passenger_info` (`id`, `name`, `address`, `email`, `mobile`, `password`) VALUES
 (1, 'Abdullah', 'Uttara', 'abdullah001rti@gmail.com', '01738868597', '25199d992c5541ac329277c20205ba18'),
-(5, 'MD. Abdullah', 'Bamnartek, Uttara, Dhaka-1230', 'abd1@gmail.com', '01738868597', '41a60377ba920919939d83326ebee5a1'),
+(5, 'MD. Abdullah', 'Bamnartek, Uttara, Dhaka - 1230', 'abd1@gmail.com', '01738868597', '41a60377ba920919939d83326ebee5a1'),
 (4, 'Abdullah', 'Uttara', 'abd@gmail.com', '01738868597', '41a60377ba920919939d83326ebee5a1'),
 (6, 'SAAD', 'Uttara Dhaka', 'raselhasandurjoy@gmail.com', '01904654712', '202cb962ac59075b964b07152d234b70');
 
