@@ -7,7 +7,7 @@ Session::init();
 /**
 * Passenger_info class
 */
-class Passenger_info extends  BaseClass
+class Passenger_info extends  Base
 {
 
 	public function PassengerReg($data){

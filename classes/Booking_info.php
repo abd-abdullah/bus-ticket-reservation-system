@@ -3,7 +3,7 @@
 /**
 * Counter_info class
 */
-class Booking_info extends BaseClass
+class Booking_info extends Base
 {
 	//fetch all Bus list
 	public function GetAllSoldTkt(){

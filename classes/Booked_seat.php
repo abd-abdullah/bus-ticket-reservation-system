@@ -2,7 +2,7 @@
 /**
 * Counter_info class
 */
-class Booked_seat extends BaseClass
+class Booked_seat extends Base
 {
 
 	public function GetAllBookedSeats($trip_id,$date){

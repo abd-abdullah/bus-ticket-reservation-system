@@ -2,7 +2,7 @@
 /**
 * index class
 */
-class Bus_info extends  BaseClass
+class Bus_info extends  Base
 {
 
 	public function GetBusById($bus_id){

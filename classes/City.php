@@ -3,7 +3,7 @@
 /**
 * index class
 */
-class City extends  BaseClass
+class City extends  Base
 {
 	
 	//fetch all Bus list

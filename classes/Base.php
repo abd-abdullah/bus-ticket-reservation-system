@@ -5,7 +5,7 @@ include_once ($_SERVER['DOCUMENT_ROOT']."/helpers/Format.php");
 /**
  * Admin_info class
  */
-class BaseClass
+class Base
 {
     protected $db;
     protected $fm;

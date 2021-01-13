@@ -3,7 +3,7 @@
 /**
 * Admin_info class
 */
-class Admin_info extends  BaseClass
+class Admin_info extends  Base
 {
 	/*admin login function*/
 	public function AdminLogin($email,$pass){

@@ -3,7 +3,7 @@
 /**
 * Counter_info class
 */
-class Trip_info extends  BaseClass
+class Trip_info extends  Base
 {
 
 	public function GetSearchBus($from_city,$to_city){
