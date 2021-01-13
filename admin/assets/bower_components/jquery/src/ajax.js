@@ -51,7 +51,7 @@ var
 	originAnchor = document.createElement( "a" );
 	originAnchor.href = location.href;
 
-// Base "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
+// BaseClass "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
 function addToPrefiltersOrTransports( structure ) {
 
 	// dataTypeExpression is optional and defaults to "*"
@@ -85,7 +85,7 @@ function addToPrefiltersOrTransports( structure ) {
 	};
 }
 
-// Base inspection function for prefilters and transports
+// BaseClass inspection function for prefilters and transports
 function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {
 
 	var inspected = {},
