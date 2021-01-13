@@ -3,18 +3,18 @@
 /**
 * Counter_info class
 */
-class Cancel_request extends  BaseClass
+class Cancel_request extends  BaseC
 {
 	
 	//fetch all Bus list
 	public function GetAllCity(){
 		$sql = "SELECT DISTINCT city_name FROM tbl_cities ORDER BY city_name ASC";
-		$result = $this->db->select($sql);
-		return $result;
+        return $this->db->select($sql);
 	}
 
 
-	public function Cancel_Request($data){
+	public function cancelRequest($data): string
+    {
 		$pnr_no = $this->test_input($data['pnr_no']);
 		$counter_id = $this->test_input($data['counter_id']);
 		$bkash_no = $this->test_input($data['bkash_no']);
@@ -30,7 +30,7 @@ class Cancel_request extends  BaseClass
 			$result = $this->db->select($Check_cancel);
 
 			if ($result != false) {
-				$msg = "Your have alraedy resquest for cancel. Wait for approval. or contact with us! ";
+				$msg = "Your have already request for cancel. Wait for approval. or contact with us! ";
 				return $msg;
 			}
 			
@@ -39,10 +39,10 @@ class Cancel_request extends  BaseClass
 			    $inserted = $this->db->insert($sql);
 
 			    if ($inserted) {
-			    	$msg = "Your Cancel_Request is succesfully donw. Wait for confirmation";
+			    	$msg = "Your Cancel_Request is successfully down. Wait for confirmation";
 				    return $msg;
 			    }else{
-			    	$msg = "Failed to cancel! contact menually";
+			    	$msg = "Failed to cancel! contact manually";
 					return $msg;
 			    }
 			}

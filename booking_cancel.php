@@ -170,7 +170,7 @@ require("admin/db_connect_for_pdf/connection.php");
 
 				<?php 
 					if(isset($_POST['cancel'])){
-						$cancel_insert = $cancel_request->Cancel_Request($_POST);
+						$cancel_insert = $cancel_request->cancelRequest($_POST);
 						
 						$msg = $cancel_insert;
 				
