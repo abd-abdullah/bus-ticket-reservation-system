@@ -1,9 +1,6 @@
 <?php
-$filepath = realpath(dirname(__FILE__));
-include_once ($filepath."/../config/config.php");
-?>
+include_once ($_SERVER['DOCUMENT_ROOT']."/config/Config.php");
 
-<?php
 Class Database{
 	public $host   = DB_HOST;
 	public $user   = DB_USER;
