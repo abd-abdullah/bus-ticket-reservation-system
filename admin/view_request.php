@@ -10,7 +10,7 @@
 	$seats= $booked_seat->BookedSeatsByPnr($data['pnr_no'],$data['passenger_id'],$data['trip_id'] );
 	$seat_no = array();
 	if($seats){
-		$value = mysqli_fetch_all($seats,MYSQLI_ASSOC);
+		$value = $seats->fetch_array(MYSQLI_ASSOC);
 		
 		for ($i=0; $i<count($value); $i++) {
 			array_push($seat_no, $value[$i]['seat_no']);

@@ -71,7 +71,7 @@ $booked_seat = new Booked_seat();
     $data = $sql->fetchAll();
 	$j=1;*/
 	$sold_tkt = $booked_seat->GetAllSoldTkt($_SESSION['fd'],$_SESSION['td']);
-	$sold_tkt = mysqli_fetch_all($sold_tkt,MYSQLI_ASSOC);
+	$sold_tkt = $sold_tkt->fetch_array(MYSQLI_ASSOC);
 	if($sold_tkt){
 	foreach($sold_tkt as $value)
 	{ 

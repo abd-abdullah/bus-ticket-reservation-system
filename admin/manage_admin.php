@@ -1,7 +1,7 @@
 <?php
 	$all_admin = $admin_info->GetAllAdmin();
 	if($all_admin)
-	$data = mysqli_fetch_all($all_admin,MYSQLI_ASSOC);
+	$data = $all_admin->fetch_array(MYSQLI_ASSOC);
 	  
 	if(isset($_POST['delete'])){
 	    $id = $_POST['admin_id'];

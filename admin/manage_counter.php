@@ -1,6 +1,7 @@
 <?php
   $AllCounter = $counter_info->GetAllCounter();
-  $AllCounter = mysqli_fetch_all($AllCounter,MYSQLI_ASSOC);
+  $AllCounter = $AllCounter->fetch_array(MYSQLI_ASSOC);
+
 	
   if(isset($_POST['delete'])){
     $id = $_POST['counter_id'];

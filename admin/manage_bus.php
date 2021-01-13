@@ -1,6 +1,6 @@
 <?php
 $AllBus = $bus_info->GetAllBus();
-$data = mysqli_fetch_all($AllBus,MYSQLI_ASSOC);
+$data = $AllBus->fetch_array(MYSQLI_ASSOC);
   
   if(isset($_POST['delete'])){
     $id = $_POST['bus_id'];

@@ -1,6 +1,6 @@
 <?php
   $AllBooking = $booking_info->GetAllBookingWithUser();
-  $data = mysqli_fetch_all($AllBooking,MYSQLI_ASSOC);
+  $data = $AllBooking->fetch_array(MYSQLI_ASSOC);
   
 ?>
 

@@ -59,8 +59,8 @@ require_once "../libs/Session.php";
   <link rel="stylesheet" href="assets/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   
-  <script src="assets/js/bootstrap-timepicker.min.js"></script>
   <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="assets/js/bootstrap-timepicker.min.js"></script>
   <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
  <script src="assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
  <script src="assets/bower_components/fastclick/lib/fastclick.js"></script>

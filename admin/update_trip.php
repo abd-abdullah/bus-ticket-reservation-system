@@ -4,10 +4,10 @@ $trip_by_id = $trip_info->GetAllTripAndBusByTripId($id);
 $data = $trip_by_id->fetch_assoc();
 
 $AllCity = $city->GetAllCityByUniqueName();
-$valueCity = mysqli_fetch_all($AllCity,MYSQLI_ASSOC);
+$valueCity = $AllCity->fetch_array(MYSQLI_ASSOC);
 
 $AllBus = $bus_info->GetAllBus();
-$valueBus = mysqli_fetch_all($AllBus,MYSQLI_ASSOC);
+$valueBus = $AllBus->fetch_array(MYSQLI_ASSOC);
 
 if (isset($_POST['btn'])) {
     $update_trip = $trip_info->UpdateTripById($_POST,$id);

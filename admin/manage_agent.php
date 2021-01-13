@@ -1,7 +1,7 @@
 <?php	
 $all_agent = $agent_info->GetAllAgentAndCounter();
 if($all_agent)
-$data = mysqli_fetch_all($all_agent,MYSQLI_ASSOC);
+$data = $all_agent->fetch_array(MYSQLI_ASSOC);
   
 if(isset($_POST['delete'])){
     $id = $_POST['agent_id'];
@@ -103,8 +103,7 @@ if(isset($_POST['btn_status'])){
 
 				    }else{
 					  
-				  ?>
-				  <button type="submit" class="btn btn-primary" name="status"><span class="glyphicon glyphicon-ok-sign"></span> Unblock</a>
+				  ?><button type="submit" class="btn btn-primary" name="status"><span class="glyphicon glyphicon-ok-sign"></span> Unblock</button>
 				   <input type="hidden" name="agent_id" value="<?php echo $value['agent_id']; ?>">
 				   <input type="hidden" name="status" value="1">	  					  					
 				  <?php 

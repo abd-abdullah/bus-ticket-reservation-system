@@ -1,6 +1,6 @@
 <?php	
 $all_trip = $trip_info->GetAllTripAndBus();
-$all_trip = mysqli_fetch_all($all_trip,MYSQLI_ASSOC);
+$all_trip = $all_trip->fetch_array(MYSQLI_ASSOC);
   
   if(isset($_POST['delete'])){
     $id = $_POST['trip_id'];

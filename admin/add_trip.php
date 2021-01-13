@@ -1,9 +1,9 @@
 <?php
 $AllCity = $city->GetAllCityByUniqueName();
-$AllCity = mysqli_fetch_all($AllCity,MYSQLI_ASSOC);
+$AllCity = $AllCity->fetch_array(MYSQLI_ASSOC);
 
 $AllBus = $bus_info->GetAllBus();
-$data = mysqli_fetch_all($AllBus,MYSQLI_ASSOC);
+$data = $AllBus->fetch_array(MYSQLI_ASSOC);
  
 if (isset($_POST['btn'])) {
   $insert_trip = $trip_info->InsertTrip($_POST);

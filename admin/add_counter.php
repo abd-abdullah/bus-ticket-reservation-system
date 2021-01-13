@@ -1,6 +1,6 @@
 <?php
 $AllCity = $city->GetAllCityByUniqueName();
-$AllCity = mysqli_fetch_all($AllCity,MYSQLI_ASSOC);
+$AllCity = $AllCity->fetch_array(MYSQLI_ASSOC);
 
 
 if (isset($_POST['btn'])) {

@@ -1,7 +1,7 @@
 <?php
 
   $AllCity = $city->GetAllCity();
-  $AllCity = mysqli_fetch_all($AllCity,MYSQLI_ASSOC);
+  $AllCity = $AllCity->fetch_array(MYSQLI_ASSOC);
 
 	if(isset($_POST['delete'])){
     $id = $_POST['city_id'];

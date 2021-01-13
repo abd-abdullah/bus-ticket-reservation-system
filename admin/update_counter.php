@@ -4,7 +4,7 @@
   $data = $counter_by_id->fetch_assoc();
 
   $AllCity = $city->GetAllCity();
-  $AllCity = mysqli_fetch_all($AllCity,MYSQLI_ASSOC);
+  $AllCity = $AllCity->fetch_array(MYSQLI_ASSOC);
 
   if (isset($_POST['btn'])) {
       $update_counter = $counter_info->UpdateCounterById($_POST,$id);

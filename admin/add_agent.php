@@ -1,6 +1,6 @@
 <?php
  $AllCounter = $counter_info->GetAllCounter();
-  $valueCounter = mysqli_fetch_all($AllCounter,MYSQLI_ASSOC);
+  $valueCounter = $AllCounter->fetch_array(MYSQLI_ASSOC);
 
 if (isset($_POST['btn'])) {
     $agent_insert = $agent_info->InsertAgent($_POST,$_FILES);

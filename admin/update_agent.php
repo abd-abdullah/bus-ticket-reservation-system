@@ -4,7 +4,7 @@
   $data = $agent_by_id->fetch_assoc();
 
    $AllCounter = $counter_info->GetAllCounter();
-  $valueCounter = mysqli_fetch_all($AllCounter,MYSQLI_ASSOC);
+  $valueCounter = $AllCounter->fetch_array(MYSQLI_ASSOC);
 
   if (isset($_POST['btn'])) {
       $update_agent = $agent_info->UpdateAgentById($_POST,$_FILES,$id);
