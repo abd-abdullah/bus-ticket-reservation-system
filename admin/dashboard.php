@@ -517,7 +517,7 @@ require_once "../libs/Session.php";
 
   <footer class="main-footer">
    <div style="text-align:center;">
-    <strong >Copyright &copy;  Team Unique (Leader <a style="color: lightseagreen;" href="https://www.facebook.com/abd1rti/">Md. Abdullah</a>).</strong> All rights
+    <strong >Copyright &copy;  Team Unique (Leader <a style="color: lightseagreen;" target="_blank" href="https://www.facebook.com/abd1rti/">Md. Abdullah</a>).</strong> All rights
     reserved.
 	</div>
   </footer>
