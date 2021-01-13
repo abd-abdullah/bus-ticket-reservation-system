@@ -2,7 +2,7 @@
 
 <?php
 	$AllCity = $city->GetAllCityByUniqueName();
-	$AllCity = $AllCity->fetch_all(MYSQLI_ASSOC);
+	$AllCity = $AllCity->fetch_array(MYSQLI_ASSOC);
 ?>
 
 
