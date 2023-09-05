@@ -69,14 +69,6 @@ My varsity Teammates
 ~Alif Mariam Bijori  
 ~Shaila Nasrin
 
-
-#### N.B: If you have any query or face any problem feel free to knock me.
-Md. Abdullah  
-abdullah001rti@gmail.com  
-Linkedin: https://www.linkedin.com/in/abd1rti  
-fb: https://www.facebook.com/abd1rti  
-skype: abdullah_rti
-
 ## License
 
 Bus Ticket Reserbation System is licensed under the [MIT license](LICENSE.md).
